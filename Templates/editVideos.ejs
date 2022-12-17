@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surf</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+ 
+
+
+  
+
+  <div class="container mt-5">
+
+    <h2>Editar Video</h2>
+  
+  <form action="/edit/<%=body.id%> " method="post">
+
+   <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Url</label>
+    <input class="fileld form-control" name="URl" placeholder="URL" required value="<%= body.URl %> " >
+  </div>
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Título</label>
+    <input class="fileld form-control" name="Title" placeholder="Título" required value="<%= body.Title %> ">
+  </div>
+  
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Descrição:</label>
+    <input class="fileld form-control" name="Description" placeholder="Description" required value="<%= body.Description %> " >
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Tags</label>
+    <select type="text" name="Tag" id="example" >
+      <option> Música </option>
+      <option> Série </option>
+      <option> Entreterimento </option>
+      <option>  Felp22 </option>
+  </select>
+  </div>
+
+  <button class="btn btn-success" >Save</button>
+
+</form>
+
+<br>
+
+<a class="btn btn-secondary" href="/">Voltar fishs</a>
+
+ <br>
+
+  
+  
+
+
+
+</body>
+</html>
