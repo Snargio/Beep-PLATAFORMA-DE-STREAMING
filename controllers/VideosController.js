@@ -18,12 +18,44 @@ const addvideo = async (req , res) => {
 
 
 const Allvideo = async ( req , res ) => {    
-    try {
-        let videos = await Video.find({}); 
-        res.render('AdmVideos', { videos }); // TODO Arrumar a rota para array 
-    } catch (error) {   
-       res.send(error);
-    }  
+//    if (req.user.admin) {
+//     try {
+//         let videos = await Video.find({}); 
+//         res.render('AdmVideos', { videos }); // TODO Arrumar a rota para array 
+//     } catch (error) {   
+//        res.send(error);
+//     } 
+//    }else{
+//     try {
+//         let videos = await Video.find({}); 
+//         res.render('UserVideo', { videos }); // TODO Arrumar a rota para array 
+//     } catch (error) {   
+//        res.send(error);
+//     } 
+//    }
+   
+
+   try {
+    let videos = await Video.find({}); 
+    if (req.user.admin){
+    res.render('AdmVideos', { videos });
+    }else res.render('UserVideo', { videos });
+ } catch (error) {   
+    res.send(error);
+ } 
+
+
+
+   
+
+
+
+
+
+
+
+
+
 };
 
 
@@ -47,14 +79,15 @@ const editvideos = async (req , res) =>{
      videos.Description = req.body.Description;
      videos.Tag = req.body.Tag;
 
-       let id = req.param.id;
+       let id = req.params.id;
+       if(req.user.admin){
        if(!id){
         id = req.body.id;
        }
 
 
        try {
-        await Video.updateOne({ _id: id },videos)
+       let data =  await Video.findByIdAndUpdate({ _id: id },videos)
          res.redirect("/")
         // res.send('Editado')
        } catch (error) {
@@ -63,11 +96,13 @@ const editvideos = async (req , res) =>{
 
 
 }
-
+};
 
  const deletevideo = async ( req , res ) => {
    
+    
     let id = req.params.id;
+    if(req.user.admin){
     if(!id){
         id = req.body.id;
     }
@@ -79,7 +114,7 @@ const editvideos = async (req , res) =>{
        res.status(404).send(error);
     } 
 
- };
-
+ }
+};
 
 module.exports = {  Allvideo, loadvideo, addvideo, editvideos, deletevideo } 
