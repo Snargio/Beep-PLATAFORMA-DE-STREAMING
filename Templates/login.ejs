@@ -4,37 +4,345 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">    <title>Document</title>
 </head>
 <body>
     
+    <div class="login">
+        <div class="hoverfulblack">
     <header>
 
-        
+        <div class="containerHeader">
+
+        <a href="https://beepdigital.com.br/"><img class="Logo" src="https://beepdigital.com.br/_next/image/?url=%2Fimg%2Ficons%2Flogo_white.svg&w=640&q=75" alt=""></a>
+
+    </div>
 
     </header>
 
-     <div class="Card">
-        <h1 style="text-align: center;" >Login</h1>
-        <form action="/user/login" method="POST">
-            <input type="email" name="email" placeholder="Email">
-            <input type="password" name="password" placeholder="Senha">
-            <button type="send" > Register </button>
-        </form>
-     </div>
-   
+
+    <main>
+
+        <div class="Text">
+
+        <h1>Faça Login para entrar na </h1>
+            <div class="typewriter">
+            <h1 class="typerwri">Streming da Beep!!!</h1>
+            </div> 
+        </div>
+
+        <div class="log">
+
+            <div class="forIndor">
+                
+           <form action="/user/login" method="POST"> 
+               <div class="inputBox">
+                 <input type="email" name="email" required="required">
+                 <span>Email</span>
+               </div>
+               <div class="inputBox">
+                <input type="password" name="password"  required="required">
+                <span>Senha</span>
+              </div>
+              <button class="butonlohin">Login</button>
+            </form>
+              
+               
+
+
+
+              <a class="register" href="/user/register"> Register </a>
+            
+        </div>
+    </div>
+    </main>
+
+
+    
+</div>
+    </div>
+
+
+    
+
+
 <style>
-    .Card{
-        border-radius: 20px;
-        padding: 10px;
-        background-color: rgb(92, 92, 92);
-        width: 15rem;
+
+
+.register:hover{
+    color:white ;
+    border: 1.5px solid white;
+   padding: 10px;
+   border-radius:15px ;
+
+}
+
+.register{
+    color:rgb(255,255,255, 0.25) ;
+    border: 1.5px solid rgb(255,255,255, 0.25);
+   padding: 10px;
+   border-radius:15px ;
+}
+
+.butonlohin{
+    color: rgb(255,255,255, 0.25);
+    font-size: 25px;
+    cursor: pointer;
+    margin-left:20px;
+    width:240px;
+    height: 50px;
+    margin:20px;
+    border: 1.5px solid rgb(255,255,255, 0.25);
+    border-radius: 20px;
+    background-color:rgb(0,25,45) ;
+
+}
+
+.butonlohin:hover{
+    color: white;
+    padding: 5px;
+    border: 1.5px solid white;
+    border-radius: 20px;
+    background-color:rgb(0, 40, 73) ;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgb(255,255,255, 0.25);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+   color: rgb(255, 255, 255);
+   transform: translateX(10px) translateY(-7px);
+   font-size: 0.7em;
+   padding: 0 10px;
+   background-color: rgb(0,25,45);
+   border-left: 1px solid rgb(255, 255, 255);
+   border-right:1px solid rgb(255, 255, 255) ;
+
+
+}
+
+.inputBox{
+    position: relative;
+    width: 250px;
+    margin: 30px;
+}
+
+.inputBox input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgb(0,25,45);
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-size: 1em;
+    
+}
+
+.forIndor{
+    
+   border-radius:25px ;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 50%;
+    flex-direction: column;
+    background-color: rgb(0,25,45);
+
+}
+
+
+    .Form{
+        border-radius: 25px;
         margin: auto;
-        text-align: center;
+        width: 50%;
+        height: 100%;
     }
-    input{
-        margin: 10px;
+
+
+.log{
+    font-weight: 800;
+    font-size: 20px;
+    font-family:monospace ;
+    margin-top:120px;
+    width: 100%;
+    height: 550px;
+        
+
+}
+
+    .typerwri{
+        color: rgb(6,105,187);
     }
+
+.typewriter h1 {
+  color: rgb(6,105,187);
+  text-shadow: 0.1em 0.1em 0.05em #333;
+  font-family: monospace;
+  overflow: hidden; 
+  border-right: .15em solid rgb(6,105,187); 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(6,105,187) }
+}
+
+
+    .Text{
+        margin-left: 60px;
+        margin-top: 250px;
+        height: 250px;
+        width: 50%;
+        font-family: montserrat;
+        color: aliceblue;
+        font-size: 35px;
+    }
+
+
+
+    main{
+        display: flex;
+    }
+
+    .hoverfulblack{
+        background-color: rgba(0, 0, 0, 0.567);
+        width: 100%;
+        height: 977px;
+    }
+
+    .login{
+        width: 100%;
+        height: 977px;
+        background-image:url(https://media.graphassets.com/LdvYaEwKT76AFo6selZE)
+
+    }
+    
+   *{
+    margin: 0;
+    padding: 0;
+   }
+
+   a{
+    text-decoration: none;
+   }
+
+   .linkHeader{
+    padding: 10px;
+    margin: 15px;
+   }
+
+   .linkHeader:hover{
+    background-color: rgba(10, 33, 53, 0.932);
+    border-radius: 20px;
+   }
+
+
+   .containerHeader{
+display: flex;
+justify-content: space-around;
+   }
+
+   .Logo{
+
+      width: 122px;
+      margin: 15px;
+   }
+
+    header{
+        background-color: rgb(0,25,45);
+    }
+
+    li{
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        color: rgba(113, 129, 143, 0.932);
+        
+        list-style: none;
+    }
+
+    li:hover{
+        color:white ;
+    }
+
+
+    ul{
+        display: flex;        
+    }
+
+    @media screen and (max-width: 900px) {
+    main{
+        display: block;
+        overflow: none;
+    }
+
+    .login{
+        width: 100%;
+        height: 90%;
+        background-image:url(https://media.graphassets.com/LdvYaEwKT76AFo6selZE)
+
+    }
+
+
+    .log{
+    font-weight: 800;
+    font-size: 20px;
+    font-family:monospace ;
+    width: 100%;
+    height: 4px;
+}
+
+.forIndor{
+    margin-top: 0px;
+    border-radius:25px ;
+     margin-left: 6%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 40vh;
+     width: 90%;
+     flex-direction: column;
+     background-color: rgb(0,25,45);
+ 
+ }
+ 
+.Text{
+    text-align: center;
+        margin-left: 10px;
+        margin-top: 5rem;
+        height: 20px;
+        width: 25rem;
+        font-family: montserrat;
+        color: aliceblue;
+        font-size: 15px;
+    }
+
+
+  }
+
 </style>
 
 </body>

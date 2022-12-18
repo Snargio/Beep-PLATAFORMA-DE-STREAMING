@@ -12,19 +12,56 @@
      <div class="Card">
         <h1 style="text-align: center;" >Logout</h1>
         <form action="/user/logout" method="POST">
-           <p>Digite seu Email para Sair da sua conta</p> <input type="text" name="email" placeholder="Email">
+           <p>Tem certeza que deseja sair? </p>
+           <select type="text" name="Tag" id="example" >
+         <option value="">Sim</option>
+           <option value="">Não</option>
+        </select>
             <button type="email" > Logout </button>
         </form>
      </div>
    
 
 <style>
-    .Card{
+h1,
+p{
+    color: rgb(105,122,136) ;
+}
+
+button:hover,
+select:hover,
+option:hover{
+    background-color: rgb(0, 65, 119) ;
+    color:white ;
+    border: 1px solid white;
+}
+
+
+    button,
+select,
+option{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: rgb(0,25,45) ;
+    color:rgb(105,122,136) ;
+    border: 1px solid rgb(105,122,136);
+}
+
+ 
+
+    .Card{ 
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        text-align: center;
+        position: absolute;
+        top: 25%;
+        left: 42%;
         border-radius: 20px;
         padding: 10px;
-        background-color: rgb(92, 92, 92);
+        background-color: rgb(0,25,45) ;
         width: 15rem;
-        margin: auto;
         text-align: center;
     }
     input{
