@@ -35,7 +35,7 @@ const pageLogout = (req,res)=>{
  
         try {
             const savedUser = await user.save()
-            res.redirect('user/login')
+            res.redirect('/user/login')
         } catch (error) {
             res.status(400).send(error)
         } 
