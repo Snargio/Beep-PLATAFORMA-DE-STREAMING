@@ -12,49 +12,34 @@ const addvideo = async (req , res) => {
     } catch (error) {
         res.render('index', {error, body: req.body})
     }
-
 };
+
+const search = async (req,res)=>{
+
+    const valor = req.query.Tag;
+    const videos = await Video.find({
+    
+        Tag: valor
+    
+    }).limit(5)
+console.log(videos)
+    res.render('search',{
+        videos: videos
+    })
+}
 
 
 
 const Allvideo = async ( req , res ) => {    
-//    if (req.user.admin) {
-//     try {
-//         let videos = await Video.find({}); 
-//         res.render('AdmVideos', { videos }); // TODO Arrumar a rota para array 
-//     } catch (error) {   
-//        res.send(error);
-//     } 
-//    }else{
-//     try {
-//         let videos = await Video.find({}); 
-//         res.render('UserVideo', { videos }); // TODO Arrumar a rota para array 
-//     } catch (error) {   
-//        res.send(error);
-//     } 
-//    }
    
-
    try {
     let videos = await Video.find({}); 
     if (req.user.admin){
     res.render('AdmVideos', { videos });
-    }else res.render('UserVideo', { videos });
+    }else res.render('useV', { videos });
  } catch (error) {   
     res.send(error);
  } 
-
-
-
-   
-
-
-
-
-
-
-
-
 
 };
 
@@ -64,6 +49,7 @@ const loadvideo = async ( req , res ) => {
 
     try {
         let videos = await Video.findById(id); 
+        console.log(videos);
         res.render('editVideos', { error:false,  body: videos }); // TODO Arrumar a rota para array 
     } catch (error) {   
        res.status(404).send(error);
@@ -99,8 +85,8 @@ const editvideos = async (req , res) =>{
 };
 
  const deletevideo = async ( req , res ) => {
-   
-    
+
+
     let id = req.params.id;
     if(req.user.admin){
     if(!id){
@@ -117,4 +103,4 @@ const editvideos = async (req , res) =>{
  }
 };
 
-module.exports = {  Allvideo, loadvideo, addvideo, editvideos, deletevideo } 
+module.exports = {  Allvideo, search, loadvideo, addvideo, editvideos, deletevideo } 

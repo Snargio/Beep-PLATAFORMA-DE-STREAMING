@@ -20,5 +20,6 @@ router.post('/edit/:id',auth, express.urlencoded({ extended: true }), admVideosC
 router.delete('/:id',auth, admVideosController.deletevideo)
 router.delete('/',auth, express.urlencoded({extended: true}), admVideosController.deletevideo )
 
+router.get('/search',express.urlencoded({ extended: true }), admVideosController.search )
 
 module.exports = router
