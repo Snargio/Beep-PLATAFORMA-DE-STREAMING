@@ -1,10 +1,10 @@
 # Text Beep PLATAFORMA DE STREAMING.
 CRIAANDO UMA PLATAFORMA DE STREAMING / CRUD <br>
-<a href="https://beepdigital.com.br/"><h1> Overview </h1></a>
+<a href="https://www.youtube.com/watch?v=Rf1TjwGBJoc&t=26s"><h1> Overview </h1></a>
 <hr>
 <div class="Log">
 <img src="./Templates/imgs/iphoneBeep.png" width="250">
-<img src="./Templates/imgs/Beepmacbook.png" width="450"> 
+<img src="./Templates/imgs/Beepmacbook.png" width="500"> 
 </div>
 <hr>
 
