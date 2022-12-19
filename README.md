@@ -1,11 +1,11 @@
 # Text Beep PLATAFORMA DE STREAMING.
-CRIAANDO UMA PLATAFORMA DE STREAMING / CRUD
-
+CRIAANDO UMA PLATAFORMA DE STREAMING / CRUD <br>
+<a href="https://beepdigital.com.br/"><h1> Overview </h1></a>
 <hr>
-
+<div class="Log">
 <img src="./Templates/imgs/iphoneBeep.png" width="250">
 <img src="./Templates/imgs/Beepmacbook.png" width="450"> 
-
+</div>
 <hr>
 
  Start:
@@ -36,7 +36,14 @@ Admin:
 Email: admin@gmail.com Senha:admiadmin
          
 <hr>
+
 Routes: <br>
 Login: localhost:3333/user/login<br>
 Register: localhost:3333/user/register<br>
 AllVideos:  localhost:3333/<br>
+
+<style>
+ .log{
+    display: flex;
+}
+ </style>
