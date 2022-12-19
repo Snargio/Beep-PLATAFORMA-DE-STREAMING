@@ -42,9 +42,11 @@ Login: localhost:3333/user/login<br>
 Register: localhost:3333/user/register<br>
 AllVideos:  localhost:3333/<br>
 
+
+
+
 <style>
  .log{
     display: flex;
-    margin: auto;
 }
  </style>
