@@ -1,5 +1,5 @@
 # Text Beep PLATAFORMA DE STREAMING.
-CRIAANDO UMA PLATAFORMA DE STREAMING / CRUD <br>
+CRIANDO UMA PLATAFORMA DE STREAMING <br>
 <a href="https://www.youtube.com/watch?v=Rf1TjwGBJoc&t=26s"><h1> Overview </h1></a>
 <hr>
 <div class="Log">
