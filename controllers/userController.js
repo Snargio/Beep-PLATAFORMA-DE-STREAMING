@@ -7,6 +7,10 @@ const ErrorEmailPassword = 'Email or password incorrect';
 const {loguinValidate, registerValidate} = require('./validate')
 
 
+const pagevídeo = (req,res)=>{
+    res.render('register')
+};
+
 const pageRegister = (req,res)=>{
     res.render('register')
 };

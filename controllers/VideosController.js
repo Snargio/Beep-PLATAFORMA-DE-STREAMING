@@ -3,6 +3,31 @@ const { link } = require('fs');
 const Video = require('../Models/Videos');
 
 
+const loadOnevideo = async ( req , res ) => { 
+    let id = req.params.id;
+
+    try {
+        let videos = await Video.findById(id); 
+        console.log(videos);
+        res.render('Video', { error:false,  body: videos }); // TODO Arrumar a rota para array 
+    } catch (error) {   
+       res.status(404).send(error);
+    } 
+};
+
+const Allvideo = async ( req , res ) => {    
+   
+   try {
+    let videos = await Video.find({}); 
+    if (req.user.admin){
+    res.render('AdmVideos', { videos });
+    }else res.render('useV', { videos });
+ } catch (error) {   
+    res.send(error);
+ } 
+
+};
+
 const addvideo = async (req , res) => {
     let Videos = new Video(req.body)
     try{
@@ -27,22 +52,6 @@ console.log(videos)
         videos: videos
     })
 }
-
-
-
-const Allvideo = async ( req , res ) => {    
-   
-   try {
-    let videos = await Video.find({}); 
-    if (req.user.admin){
-    res.render('AdmVideos', { videos });
-    }else res.render('useV', { videos });
- } catch (error) {   
-    res.send(error);
- } 
-
-};
-
 
 const loadvideo = async ( req , res ) => { 
     let id = req.params.id;
@@ -103,4 +112,4 @@ const editvideos = async (req , res) =>{
  }
 };
 
-module.exports = {  Allvideo, search, loadvideo, addvideo, editvideos, deletevideo } 
+module.exports = {  Allvideo, loadOnevideo, search, loadvideo, addvideo, editvideos, deletevideo } 
