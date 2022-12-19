@@ -39,7 +39,7 @@ const cookieParser = require('cookie-parser')
 
 
 // ------------- Rotas
-// app.get('/', (req,res)=> {res.render('Home')});
+
 
 app.use('/',cookieParser(),
 express.json(),
@@ -47,9 +47,6 @@ express.urlencoded({extended:true}), videosRoute);
 
 app.use('/user',express.urlencoded({extended:true}), userRouter);
 
-// app.use('/admin', express.json() , adminRouter )
-
-// app.use('/videos',express.json(), VideosRouter  )
 // -------------
 
 

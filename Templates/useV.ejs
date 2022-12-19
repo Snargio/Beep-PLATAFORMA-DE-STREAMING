@@ -39,7 +39,7 @@
 
                 <div class="card">
 
-                    <h4> <%=videos[i].Title%></h4>
+                    <a href="/video/<%=videos[i]._id%>"><h4> <%=videos[i].Title%></h4></a>
 
                     <iframe  src="<%=videos[i].URl%>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="desc" >

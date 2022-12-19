@@ -9,7 +9,7 @@ const admVideosController = require('../controllers/VideosController')
 
 router.use(methodOverride('_method'));
 
-
+router.get('/video/:id',auth, admVideosController.loadOnevideo )
 router.get('/',auth, admVideosController.Allvideo);
 router.get('/edit/:id',auth, admVideosController.loadvideo);
 router.get('/add',auth, (req , res) => res.render('addVideo', {error: false}));
