@@ -3,8 +3,8 @@ CRIAANDO UMA PLATAFORMA DE STREAMING / CRUD
 
 <hr>
 
-
-
+<img src="./Templates/imgs/iphoneBeep" width="350">
+<img src="./Templates/imgs/Beepmacbook" width="350"> 
 
 <hr>
 
