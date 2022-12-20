@@ -43,7 +43,7 @@ Register: localhost:3333/user/register<br>
 AllVideos:  localhost:3333/<br>
 
 
-
+<hr>
 
 <style>
  .log{
