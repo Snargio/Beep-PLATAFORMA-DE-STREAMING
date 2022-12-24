@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vídeo</title>
+  </head>
+  <body>
+    <div class="cardBorder">
+      <div class="card">
+        <h1><%= body.Title %></h1>
+
+        <iframe
+          src="<%=body.URl%>"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <div class="desc">
+          <div id="descPadron" class="card-text">
+            Descrição: <%=body.Description%>
+          </div>
+
+          <div><p>Artista: <%=body.Tag%></p></div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      #descPadron,
+      p {
+        width: 900px;
+        margin: 5px;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        width: 900px;
+        margin: 25px;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      iframe {
+        margin: auto;
+        width: 120%;
+        height: 100%;
+      }
+
+      .card {
+        width: 600px;
+        height: 500px;
+        margin: auto;
+      }
+
+      .cardBorder {
+        width: 100%;
+        margin-top: 100px;
+      }
+
+      body {
+        background-color: rgb(0, 46, 83);
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </body>
+</html>
